@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.getElementById('theme-toggle');
     const body = document.body;
+    const filterSelect = document.getElementById('filter');
 
-
+    // Theme toggle logic
     if (localStorage.getItem('theme') === 'light') {
         body.classList.add('light-mode');
         toggle.checked = true;
@@ -10,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
         body.classList.remove('light-mode');
         toggle.checked = false;
     }
-
 
     toggle.addEventListener('change', () => {
         if (toggle.checked) {
@@ -21,9 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('theme', 'dark');
         }
     });
+
+    // Filter handling
+    filterSelect.addEventListener('change', () => {
+        const selectedFilter = filterSelect.value;
+        sendData(selectedFilter); // Pass the filter value to sendData
+    });
 });
 
-function sendData() {
+function sendData(filter) {
     const dataInput = document.getElementById('data').value;
     const dataArray = dataInput.split(',').map(item => item.trim());
 
@@ -41,7 +47,21 @@ function sendData() {
     .then(response => response.json())
     .then(data => {
         const outputDiv = document.getElementById('output');
-        outputDiv.innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+        let filteredData;
+
+        if (filter === "numbers") {
+            filteredData = {
+                numbers: data.numbers.filter(item => !isNaN(item)), // Filter numbers only using isNaN
+            };
+        } else if (filter === "alphabets") {
+            filteredData = {
+                alphabets: data.alphabets.filter(item => item.match(/^[a-zA-Z]+$/)), // Filter alphabets only using regex
+            };
+        } else {
+            filteredData = data; // Display all data if filter is "all"
+        }
+
+        outputDiv.innerHTML = '<pre>' + JSON.stringify(filteredData, null, 2) + '</pre>';
     })
     .catch(error => {
         console.error('Error:', error);

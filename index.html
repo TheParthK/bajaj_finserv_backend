@@ -127,6 +127,27 @@
             background: #e9ecef; 
             color: #000000; 
         }
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            padding: 10px 20px;
+            border: 1px solid #444444;
+            border-radius: 4px;
+            background-color: #333333;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        select option {
+            color: #ffffff;
+            background-color: #333333;
+        }
     </style>
 </head>
 <body>
@@ -138,21 +159,25 @@
 
         <div class="output" id="output"></div>
 
-
         <div style="text-align: center; margin-top: 20px;">
             <label>
                 <input type="checkbox" id="theme-toggle">
                 <span>Toggle Dark/Light Mode</span>
             </label>
+            <br>
+            <label for="filter">Filter By: </label>
+            <select id="filter">
+                <option value="all">All</option>
+                <option value="numbers">Numbers Only</option>
+                <option value="alphabets">Alphabets Only</option>
+            </select>
         </div>
     </div>
 
     <footer>
-        <p>Made by Parth Kalia</p>
-        <p>Registration Number: 21BAI10109</p>
-        <p>Email IDs: <a href="mailto:parthk0902@gmail.com">parthk0902@gmail.com</a>, <a href="mailto:parth.kalia2021@vitbhopal.ac.in">parth.kalia2021@vitbhopal.ac.in</a></p>
-    </footer>
+        </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
