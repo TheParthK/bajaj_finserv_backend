@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const cron = require('node-cron');
 
 app.use(cors()); 
+// app.use(cron()); 
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
@@ -34,7 +36,25 @@ app.post('/bfhl', (req, res) => {
     });
 });
 
+// 
+const backendUrl = "https://bajaj-finserv-backend-wn08.onrender.com/bfhl";
+cron.schedule("*/180 * * * * * ", async function () {
+  console.log("Restarting server");
 
+  await https
+    .get(backendUrl, (res) => {
+      if (res.statusCode === 200) {
+        console.log("Restarted");
+      } else {
+        console.error('failed to restart with status code: ${res.statusCode}');
+      }
+    })
+    .on("error", (err) => {
+      console.log("hi");
+      console.error("Error ", err.message);
+    });
+});
+// 
 app.get('/bfhl', (req, res) => {
     res.status(200).json({
         operation_code: 1
