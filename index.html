@@ -4,51 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BFHL Backend Interaction</title>
-    <style>
+    <style id="theme-style">
+        /* Default to dark mode */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #000000; /* Pure black background */
+            color: #ffffff; /* Pure white text color */
             margin: 0;
             padding: 20px;
         }
+
         .container {
             max-width: 600px;
             margin: 0 auto;
-            background: #fff;
+            background: #1a1a1a; /* Slightly lighter than pure black for the container */
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px; /* Rounded corners for a softer look */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Stronger shadow for contrast */
         }
+
         h1 {
             text-align: center;
             margin-bottom: 20px;
+            color: #ffffff; /* White color for headings */
         }
+
         label {
             display: block;
             margin-bottom: 10px;
+            color: #cccccc; /* Light grey for labels */
         }
+
         input[type="text"] {
             width: calc(100% - 20px);
             padding: 10px;
             margin-bottom: 20px;
+            background: #333333; /* Dark grey background for input */
+            border: 1px solid #444444; /* Subtle grey border */
+            color: #ffffff; /* White text color in input */
+            border-radius: 4px; /* Rounded corners for input */
         }
+
+        input[type="text"]::placeholder {
+            color: #888888; /* Grey color for placeholder text */
+        }
+
         button {
             padding: 10px 15px;
-            background-color: #5cb85c;
-            color: white;
+            background-color: #4CAF50; /* Bright green for buttons */
+            color: #ffffff; /* White text */
             border: none;
             cursor: pointer;
+            border-radius: 4px; /* Rounded corners for buttons */
         }
+
         button:hover {
-            background-color: #4cae4c;
+            background-color: #45a049; /* Darker green on hover */
         }
+
         .output {
             margin-top: 20px;
             padding: 10px;
-            background: #e9ecef;
+            background: #222222; /* Darker grey for output background */
             border-radius: 5px;
+            color: #ffffff; /* White text color */
         }
+
         .output pre {
             white-space: pre-wrap;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #cccccc;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        /* Light mode styles */
+        .light-mode body {
+            background-color: #ffffff; /* White background */
+            color: #000000; /* Black text color */
+        }
+
+        .light-mode .container {
+            background: #f0f0f0; /* Light grey for the container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+        }
+
+        .light-mode h1 {
+            color: #000000; /* Black color for headings */
+        }
+
+        .light-mode label {
+            color: #333333; /* Dark grey for labels */
+        }
+
+        .light-mode input[type="text"] {
+            background: #ffffff; /* White background for input */
+            border: 1px solid #cccccc; /* Light grey border */
+            color: #000000; /* Black text color in input */
+        }
+
+        .light-mode input[type="text"]::placeholder {
+            color: #666666; /* Darker grey for placeholder text */
+        }
+
+        .light-mode button {
+            background-color: #5bc0de; /* Light blue for buttons */
+        }
+
+        .light-mode button:hover {
+            background-color: #31b0d5; /* Darker blue on hover */
+        }
+
+        .light-mode .output {
+            background: #e9ecef; /* Light grey for output background */
+            color: #000000; /* Black text color */
         }
     </style>
 </head>
@@ -60,7 +137,21 @@
         <button onclick="sendData()">Submit</button>
 
         <div class="output" id="output"></div>
+
+        <!-- Toggle switch for dark/light mode -->
+        <div style="text-align: center; margin-top: 20px;">
+            <label>
+                <input type="checkbox" id="theme-toggle">
+                <span>Toggle Dark/Light Mode</span>
+            </label>
+        </div>
     </div>
+
+    <footer>
+        <p>Made by Parth Kalia</p>
+        <p>Registration Number: 21BAI10109</p>
+        <p>Email IDs: <a href="mailto:parthk0902@gmail.com">parthk0902@gmail.com</a>, <a href="mailto:parth.kalia2021@vitbhopal.ac.in">parth.kalia2021@vitbhopal.ac.in</a></p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
