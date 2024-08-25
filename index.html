@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BFHL Backend Interaction</title>
+    <title>21BAI10109</title>
     <style id="theme-style">
-        /* Default to dark mode */
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #000000; /* Pure black background */
-            color: #ffffff; /* Pure white text color */
+            background-color: #000000; 
+            color: #ffffff; 
             margin: 0;
             padding: 20px;
         }
@@ -17,57 +17,57 @@
         .container {
             max-width: 600px;
             margin: 0 auto;
-            background: #1a1a1a; /* Slightly lighter than pure black for the container */
+            background: #1a1a1a; 
             padding: 20px;
-            border-radius: 8px; /* Rounded corners for a softer look */
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Stronger shadow for contrast */
+            border-radius: 8px; 
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
         }
 
         h1 {
             text-align: center;
             margin-bottom: 20px;
-            color: #ffffff; /* White color for headings */
+            color: #ffffff; 
         }
 
         label {
             display: block;
             margin-bottom: 10px;
-            color: #cccccc; /* Light grey for labels */
+            color: #cccccc;
         }
 
         input[type="text"] {
             width: calc(100% - 20px);
             padding: 10px;
             margin-bottom: 20px;
-            background: #333333; /* Dark grey background for input */
-            border: 1px solid #444444; /* Subtle grey border */
-            color: #ffffff; /* White text color in input */
-            border-radius: 4px; /* Rounded corners for input */
+            background: #333333; 
+            border: 1px solid #444444; 
+            color: #ffffff; 
+            border-radius: 4px; 
         }
 
         input[type="text"]::placeholder {
-            color: #888888; /* Grey color for placeholder text */
+            color: #888888; 
         }
 
         button {
             padding: 10px 15px;
-            background-color: #4CAF50; /* Bright green for buttons */
-            color: #ffffff; /* White text */
+            background-color: #4CAF50; 
+            color: #ffffff; 
             border: none;
             cursor: pointer;
-            border-radius: 4px; /* Rounded corners for buttons */
+            border-radius: 4px; 
         }
 
         button:hover {
-            background-color: #45a049; /* Darker green on hover */
+            background-color: #45a049; 
         }
 
         .output {
             margin-top: 20px;
             padding: 10px;
-            background: #222222; /* Darker grey for output background */
+            background: #222222; 
             border-radius: 5px;
-            color: #ffffff; /* White text color */
+            color: #ffffff; 
         }
 
         .output pre {
@@ -86,46 +86,46 @@
             text-decoration: none;
         }
 
-        /* Light mode styles */
+
         .light-mode body {
-            background-color: #ffffff; /* White background */
-            color: #000000; /* Black text color */
+            background-color: #ffffff; 
+            color: #000000; 
         }
 
         .light-mode .container {
-            background: #f0f0f0; /* Light grey for the container */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+            background: #f0f0f0; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
         }
 
         .light-mode h1 {
-            color: #000000; /* Black color for headings */
+            color: #000000; 
         }
 
         .light-mode label {
-            color: #333333; /* Dark grey for labels */
+            color: #333333; 
         }
 
         .light-mode input[type="text"] {
-            background: #ffffff; /* White background for input */
-            border: 1px solid #cccccc; /* Light grey border */
-            color: #000000; /* Black text color in input */
+            background: #ffffff; 
+            border: 1px solid #cccccc; 
+            color: #000000; 
         }
 
         .light-mode input[type="text"]::placeholder {
-            color: #666666; /* Darker grey for placeholder text */
+            color: #666666; 
         }
 
         .light-mode button {
-            background-color: #5bc0de; /* Light blue for buttons */
+            background-color: #5bc0de; 
         }
 
         .light-mode button:hover {
-            background-color: #31b0d5; /* Darker blue on hover */
+            background-color: #31b0d5;
         }
 
         .light-mode .output {
-            background: #e9ecef; /* Light grey for output background */
-            color: #000000; /* Black text color */
+            background: #e9ecef; 
+            color: #000000; 
         }
     </style>
 </head>
@@ -138,7 +138,7 @@
 
         <div class="output" id="output"></div>
 
-        <!-- Toggle switch for dark/light mode -->
+
         <div style="text-align: center; margin-top: 20px;">
             <label>
                 <input type="checkbox" id="theme-toggle">

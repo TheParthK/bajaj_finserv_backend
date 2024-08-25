@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.getElementById('theme-toggle');
     const body = document.body;
 
-    // Load saved theme from localStorage
+
     if (localStorage.getItem('theme') === 'light') {
         body.classList.add('light-mode');
         toggle.checked = true;
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         toggle.checked = false;
     }
 
-    // Toggle theme
+
     toggle.addEventListener('change', () => {
         if (toggle.checked) {
             body.classList.add('light-mode');
