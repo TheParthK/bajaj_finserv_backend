@@ -172,6 +172,14 @@
         <label for="data">Enter Data (comma separated):</label>
         <input type="text" id="data" placeholder="e.g., M,1,334,4,B,Z,a">
         <button onclick="sendData()">Submit</button>
+        <br><br>
+        <label for="filter">Filter By: </label>
+        <select id="filter">
+            <option value="all">All</option>
+            <option value="numbers">Numbers Only</option>
+            <option value="alphabets">Alphabets Only</option>
+            <option value="high">Highest Lowercase Alphabet</option>
+        </select>
 
         <div class="output" id="output"></div>
 
@@ -180,14 +188,6 @@
                 <input type="checkbox" id="theme-toggle">
                 <span>Toggle Dark/Light Mode</span>
             </label>
-            <br>
-            <label for="filter">Filter By: </label>
-            <select id="filter">
-                <option value="all">All</option>
-                <option value="numbers">Numbers Only</option>
-                <option value="alphabets">Alphabets Only</option>
-                <option value="high">Highest Lowercase Alphabet</option>
-            </select>
         </div>
     </div>
     <!-- <div id="filtered-output">
