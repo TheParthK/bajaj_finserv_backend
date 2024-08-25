@@ -86,8 +86,8 @@ function sendData(filter) {
 
 
     // Display the filtered output
-    filteredOutputDiv.style.display = 'block';
-    numbersOutputDiv.innerHTML = '<pre>' + JSON.stringify(extractedOutput.numbers, null, 2) + '</pre>';
-    alphabetsOutputDiv.innerHTML = '<pre>' + JSON.stringify(extractedOutput.alphabets, null, 2) + '</pre>';
-    highestLowercaseAlphabetOutputDiv.innerHTML = '<pre>' + JSON.stringify(extractedOutput.highest_lowercase_alphabet, null, 2) + '</pre>';
+    // filteredOutputDiv.style.display = 'block';
+    // numbersOutputDiv.innerHTML = '<pre>' + JSON.stringify(extractedOutput.numbers, null, 2) + '</pre>';
+    // alphabetsOutputDiv.innerHTML = '<pre>' + JSON.stringify(extractedOutput.alphabets, null, 2) + '</pre>';
+    // highestLowercaseAlphabetOutputDiv.innerHTML = '<pre>' + JSON.stringify(extractedOutput.highest_lowercase_alphabet, null, 2) + '</pre>';
 }
