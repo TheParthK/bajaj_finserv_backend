@@ -148,6 +148,22 @@
             color: #ffffff;
             background-color: #333333;
         }
+        .numbers, .alphabets {
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 4px;
+        font-family: monospace; /* Use a monospaced font for consistent spacing */
+    }
+
+    .numbers {
+        background-color: #3c8dbc; /* Light blue background for numbers */
+        color: #ffffff; /* White text for numbers */
+    }
+
+    .alphabets {
+        background-color: #ffc107; /* Light yellow background for alphabets */
+        color: #000000; /* Black text for alphabets */
+    }
     </style>
 </head>
 <body>
@@ -170,9 +186,18 @@
                 <option value="all">All</option>
                 <option value="numbers">Numbers Only</option>
                 <option value="alphabets">Alphabets Only</option>
+                <option value="high">Highest Lowercase Alphabet</option>
             </select>
         </div>
     </div>
+    <!-- <div id="filtered-output">
+        <p>Numbers:</p>
+        <pre id="numbers-output"></pre>
+        <p>Alphabets:</p>
+        <pre id="alphabets-output"></pre>
+        <p>Highest Lowercase Alphabet:</p>
+        <pre id="highest-lowercase-alphabet-output"></pre>
+    </div> -->
 
     <footer>
         <p>Made by Parth Kalia</p>
